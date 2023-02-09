@@ -1,0 +1,11 @@
+def climb_stairs(n):
+    a = 1
+    b = 2
+    for i in range(3,n + 1):
+        c = a + b
+        a = b
+        b = c
+    return b if n > 1 else 1
+
+n = int(input('Enter the no of steps in the staircase: '))
+print('no of ways to climb to the top:', climb_stairs(n))
