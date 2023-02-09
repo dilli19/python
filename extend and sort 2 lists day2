@@ -1,0 +1,7 @@
+a =[0,1,9]
+print("enter the list 1")
+b =[3,4,5]
+print("enter the list 2")
+a.extend(b)
+a.sort()
+print(a)
