@@ -1,0 +1,20 @@
+def addBinary(a, b):
+    result = []
+    carry = 0
+    a = a[::-1]
+    b = b[::-1]
+    max_len = max(len(a), len(b))
+    for i in range(max_len):
+        x = int(a[i]) if i < len(a) else 0
+        y = int(b[i]) if i < len(b) else 0
+        s = x + y + carry
+        result.append(str(s % 2))
+        carry = s // 2
+    if carry:
+        result.append(str(carry))
+    return "".join(result[::-1])
+print(addBinary("11", "1")) 
+print(addBinary("1010", "1011")) 
+print(addBinary("1111", "1010")) 
+print(addBinary("101101", "1100")) 
+print(addBinary("15", "45"))
